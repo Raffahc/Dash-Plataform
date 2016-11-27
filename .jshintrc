@@ -1,0 +1,11 @@
+{
+    "globals": {
+        "require": true,
+        "module": true,
+        "exports": true,
+        "process": true,
+        "angular": true,
+        "window": true,
+        "_": true
+    }
+}

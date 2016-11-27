@@ -1,0 +1,12 @@
+{
+  "name": "_board",
+  "version": "0.0.1",
+  "scripts": {
+    "server": "node application.js",
+    "ui": "cd user-interface && ng serve --proxy-config proxy.conf.json",
+    "start": "npm run server | npm run ui"
+  },
+  "dependencies": {
+    "angular-translate": "^2.11.1"
+  }
+}

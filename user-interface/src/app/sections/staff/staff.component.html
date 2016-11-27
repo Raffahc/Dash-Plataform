@@ -1,0 +1,54 @@
+<div class="staff-section">
+
+  <div class="card">
+
+    <div class="card-header">
+      <span class="font-weight-bold"> Novo Staff </span>
+    </div>
+
+    <div class="card-block">
+
+      <form>
+        <div class="row">
+
+          <div class="col-sm-6 p-0">
+            <div class="form-group col-sm-12">
+              <label for="staff-name"> Nome </label>
+              <input id="staff-name" class="form-control" [(ngModel)]="staff.name" name="name" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+              <label for="staff-phone"> Telefone </label>
+              <input id="staff-phone" class="form-control" [(ngModel)]="staff.phone" name="phone">
+            </div>
+
+          </div>
+
+          <div class="col-sm-6 p-0">
+            <div class="form-group col-sm-12">
+              <label for="staff-mail"> E-mail </label>
+              <input id="staff-mail" class="form-control" [(ngModel)]="staff.email" name="email" type="email" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+              <label for="staff-pass"> Senha </label>
+              <input id="staff-pass" class="form-control" [(ngModel)]="staff.pass" name="pass" type="password" required>
+            </div>
+
+            <div class="form-group col-sm-6 actions-field">
+              <div class="float-sm-right">
+                <button type="reset" class="btn btn-primary"> Cancelar </button>
+                <button type="submit" class="btn btn-info" (click)="onSave()"> Salvar </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
