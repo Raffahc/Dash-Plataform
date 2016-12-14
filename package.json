@@ -1,12 +1,13 @@
 {
-  "name": "_board",
-  "version": "0.0.1",
+  "name": "dash-plataform",
+  "version": "0.0.2",
   "scripts": {
+    "install-data-base": "cd data-base && npm install",
+    "install-server-side": "cd server-side && npm install",
+    "install-user-interface": "cd user-interface && npm install",
+    "postinstall": "npm run install-data-base && npm run install-server-side && npm run install-user-interface",
     "server": "node application.js",
     "ui": "cd user-interface && ng serve --proxy-config proxy.conf.json",
     "start": "npm run server | npm run ui"
-  },
-  "dependencies": {
-    "angular-translate": "^2.11.1"
   }
 }

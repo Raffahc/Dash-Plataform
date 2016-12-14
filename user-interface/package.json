@@ -1,7 +1,6 @@
 {
-  "name": "user-interface",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "dash-plataform-user-interface",
+  "version": "0.0.1",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
@@ -10,7 +9,6 @@
     "pree2e": "webdriver-manager update",
     "e2e": "protractor"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^2.1.0",
     "@angular/compiler": "^2.1.0",

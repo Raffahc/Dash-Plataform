@@ -1,4 +1,4 @@
-var Model = require('mongoose').model('Team'),
+var Model = require('mongoose').model('Staff'),
     ResponseHandler = require('../../middlewares/response-handler/response-handler');
 
 function create(req, res, next) {
@@ -33,8 +33,6 @@ function listById(req, res, next, id) {
 }
 
 function removeAll(req, res, next) {
-
-
     Model.remove({}, function (err) {
         if (err) {
             console.log(err);
@@ -42,12 +40,6 @@ function removeAll(req, res, next) {
             res.end('success');
             next();
         }
-    });
-}
-
-function drop() {
-    mongoose.connection.collections['replaceWithName'].drop(function (err) {
-        console.log('collection dropped');
     });
 }
 

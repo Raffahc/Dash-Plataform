@@ -1,6 +1,6 @@
 module.exports = {
     mongoose: {
-        db: 'mongodb://localhost/mean-book',
+        db: 'mongodb://localhost/dash-plataform',
         sessionSecret: 'developmentSessionSecret'
     }
 };

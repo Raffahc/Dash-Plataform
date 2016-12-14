@@ -22,7 +22,7 @@ export class StaffDataAccessService extends DataAccess {
             .catch(this.handleRequestError);
     }
 
-    getStaffList(): Promise<Staff[]> {
+    getStaffList(): Promise<Array<Staff>> {
         return this.http
             .get(this.getUrl(), this.getJsonHeader())
             .toPromise()

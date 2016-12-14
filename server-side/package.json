@@ -1,5 +1,5 @@
 {
-  "name": "_board-server",
+  "name": "dash-plataform-server-side",
   "version": "0.0.1",
   "dependencies": {
     "body-parser": "^1.15.2",

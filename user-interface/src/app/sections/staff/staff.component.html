@@ -51,4 +51,10 @@
 
   </div>
 
+  <div class="staff-list" *ngIf="staffList">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let staff of staffList"> {{ staff.email }} </li>
+    </ul>
+  </div>
+
 </div>

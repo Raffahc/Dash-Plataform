@@ -10,16 +10,19 @@ import { StaffDataAccessService } from '../../model/staff/staff-data-access.serv
   providers: [StaffDataAccessService]
 })
 export class StaffComponent implements OnInit {
-  staff: Staff = new Staff();
-
   constructor(
     private staffDataAccess: StaffDataAccessService
   ) { }
 
-  ngOnInit() { }
+  staff: Staff = new Staff();
+  staffList: Array<Staff>;
+
+  ngOnInit() {
+    this.loadStaff();
+  }
 
   private isValid(staff: Staff): Boolean {
-    let isValid =  true;
+    let isValid = true;
 
     if (!staff.name) {
       return false;
@@ -39,11 +42,19 @@ export class StaffComponent implements OnInit {
     this.staff = new Staff();
   }
 
+  private loadStaff(): void {
+    this.staffDataAccess.getStaffList()
+      .then(response => {
+        this.staffList = response;
+      });
+  }
+
   onSave(): void {
     if (this.isValid(this.staff)) {
       this.staffDataAccess.postStaff(this.staff)
         .then(response => {
           this.clearModel();
+          this.loadStaff();
         });
     }
   }
