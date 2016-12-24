@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "mapRoot": "./",
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 {
   "name": "dash-plataform",
-  "version": "0.0.2",
+  "version": "1.0.0",
+  "types": "./index.ts",
   "scripts": {
     "install-data-base": "cd data-base && npm install",
     "install-server-side": "cd server-side && npm install",
