@@ -3,13 +3,10 @@ import * as bodyParser from "body-parser";
 import * as methodOverride from "method-override";
 
 export class Express {
-    constructor(
-        private routes: any,
-        private publicFolderPath: string) {
-    }
+    constructor(private publicFolderPath: string) { }
 
     private port: Number = 3000;
-    private server: any;
+    public application: express.Application;
 
     private configBodyParser(): any {
         return {
@@ -20,15 +17,15 @@ export class Express {
     public start(): void {
         let configBodyParser = this.configBodyParser();
 
-        this.server = express();
+        this.application = express();
 
-        this.server.use(bodyParser.urlencoded(configBodyParser));
-        this.server.use(bodyParser.json());
-        this.server.use(methodOverride());
+        this.application.use(bodyParser.urlencoded(configBodyParser));
+        this.application.use(bodyParser.json());
+        this.application.use(methodOverride());
 
-        // this.routes(this.server);
-        this.server.use(express.static(this.publicFolderPath));
-        this.server.listen(this.port);
+        // this.routes(this.application);
+        this.application.use(express.static(this.publicFolderPath));
+        this.application.listen(this.port);
 
         console.info('\nServer Running at http://localhost:' + this.port + '\n');
     }

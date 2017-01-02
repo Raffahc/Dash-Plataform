@@ -2,11 +2,10 @@ import { Express } from "./express/express";
 
 export class Server {
     constructor(
-        private routes: any,
         private publicFolderPath: string) {
 
-        this.server = new Express(routes, publicFolderPath);
+        this.application = new Express(publicFolderPath);
     }
 
-    public server: Express;
+    public application: Express;
 } 
